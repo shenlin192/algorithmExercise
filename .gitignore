@@ -1,2 +1,4 @@
-.*~
 **/*~
+#ignore hidden files
+.*
+!/.gitignore
