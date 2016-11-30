@@ -1,26 +1,16 @@
-var array=[0,2,3,1,45,6,2,8]
+var array=[4,8,9,1,3,0]
 
-function insertSort(arr){
-	for(let i=0;i<arr.length;i++){
-		let element=arr[i];
-			
-		for(var j=i;j>0;j--){
-			
-			if(element<arr[j-1]){
-			arr[j]=arr[j-1];	
-			}else{
-				arr[j]=element;
-				break;
-			}
+function insertSort(a){
+	for(let i=1;i<a.length;i++){
+		let key = a[i];
+		let j=i-1;
+		while(a[j]>key&&j>=0){
+			a[j+1]=a[j];
+			j--;
 		}
-		
-	
+		a[j+1]=key;
 	}
-	return arr;
+	return a;
 }
-
-
-
-
 
 console.log(insertSort(array));
